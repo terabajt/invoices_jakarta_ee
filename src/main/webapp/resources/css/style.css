@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+/* Top bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3b50;
+    color: white;
+    padding: 10px 20px;
+}
+
+.top-bar--menu {
+    padding: 5px;
+}
+
+.top-bar--menu span {
+    margin-right: 10px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* sidebar */
+.sidebar {
+    width: 250px;
+    background: #3c4b64;
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+}
+
+.sidebar.hidden {
+    left: -250px;
+}
+
+/* logo */
+.sidebar .logo {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* menu */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.sidebar ul li a, .sidebar ul li h\:link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+}
+
+.sidebar ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+    background: #50617a;
+    transform: scale(1.05);
+}
+
+.sidebar ul li.active {
+    background: #2c3b50;
+    font-weight: bold;
+}
+
+
+.sidebar.hidden ~ .content {
+    margin-left: 0;
+}
+
+.sidebar .logo {
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+/* main content */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+    width: 100%;
+}
+
+
+/* Footer */
+.footer {
+    background: #2c3b50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

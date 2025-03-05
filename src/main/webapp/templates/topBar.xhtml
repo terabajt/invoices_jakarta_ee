@@ -1,0 +1,17 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <div class="top-bar">
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="pi pi-bars"></i>
+        </button>
+        <div class="top-bar--menu">
+            <span>Invoices</span>
+            <span>Wyloguj</span>
+        </div>
+
+    </div>
+
+    <h:outputScript library="js" name="toggleMenu.js"/>
+</ui:composition>
