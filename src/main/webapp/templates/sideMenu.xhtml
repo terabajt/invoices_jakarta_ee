@@ -1,0 +1,32 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <div class="sidebar">
+        <div class="logo">
+            <h:graphicImage library="images" name="logo_main.png" alt="Moje Logo"/>
+        </div>
+        <ul>
+            <li>
+                <h:link outcome="/views/dashboard/dashboard">
+                    <i class="pi pi-home"></i> <span>Dashboard</span>
+                </h:link>
+            </li>
+            <li>
+                <h:link outcome="/views/invoices/invoices">
+                    <i class="pi pi-file"></i> <span>Faktury</span>
+                </h:link>
+            </li>
+            <li>
+                <h:link outcome="/views/clients/clients">
+                    <i class="pi pi-users"></i> <span>Klienci</span>
+                </h:link>
+            </li>
+            <li>
+                <h:link outcome="/views/settings/settings">
+                    <i class="pi pi-cog"></i> <span>Ustawienia</span>
+                </h:link>
+            </li>
+        </ul>
+    </div>
+</ui:composition>

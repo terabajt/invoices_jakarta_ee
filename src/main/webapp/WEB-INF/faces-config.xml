@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config xmlns="https://jakarta.ee/xml/ns/jakartaee"
               version="4.0">
+
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <to-view-id>/views/dashboard/dashboard.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/pages/invoices.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addInvoice</from-outcome>
+            <to-view-id>/pages/addInvoice.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
